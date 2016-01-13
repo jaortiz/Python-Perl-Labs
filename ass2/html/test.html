@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset=UTF-8">
+   <title>Bitter</title>
+   <link href="bitter.css" rel="stylesheet">
+</head>
+<header>
+   <form action="bitter.cgi" method="get">
+      <input type="submit" value="Home" name="operation">
+   </form>
+   <form action="bitter.cgi" method="get">
+      <input type="submit" value="Log Out" name="operation">
+   </form>
+   <form action="bitter.cgi" method="get">
+      <input type="text" name="searchQuery" required>
+      <input type="submit" value="search" name="operation">
+   </form>
+   <form action="bitter.cgi" method="post" id="bleatForm">
+      <input type="submit" value="Bleat" name="operation">
+   </form>                                  
+   <br>
+   <br>
+</header>
+<body>
+   %(user)s
+   %(bleats)s
+</body>
+</html>

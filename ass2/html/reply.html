@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bitter</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid"> 
+         <div class="navbar-header">
+         <a class="navbar-brand">Bitter</a>
+      </div>
+         <ul class="nav navbar-nav">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Home" name="operation">Home</button>
+               </form>
+            </li>
+         </ul>
+         <div class="col-sm-3 col-md-3">
+         <form action="bitter.cgi" class="navbar-form" role="search">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="searchQuery"required>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" value="search" name="operation"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+         </div>
+         </form>
+         </div>
+         <ul class="nav navbar-nav navbar-right">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Settings" name="operation">Settings</button>
+               </form>
+            </li>
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Log Out" name="operation">Log Out</button>
+               </form>
+            </li>
+         </ul>
+   </nav>
+</header>
+<body>
+<style>
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.bg-2 {
+   background-color: #474e5d; /* Dark Blue */
+   color: #ffffff;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+.col-lg-4 {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+input[type="text"] {
+   color:#000000;
+}
+
+</style>
+
+   <div class="container-fluid bg-1 text-center">
+      <h2>Reply To</h2>
+      %(bleat)s
+      <div class="container-fluid bg-2 text-center">
+         <textarea name="bleatStr" class="form-control" form="replyBleat" placeholder="Reply bleat!!"  rows ="6" cols="80" maxlength=142 required></textarea>
+         <br>
+         <form action="bitter.cgi" method="post" id="replyBleat">
+            <input type="hidden" value="%(bleatID)s" name="bleatid">
+            <button class="btn btn-info" value="Reply To Bleat" name="operation">Reply</button>
+         </form>
+      </div>
+   </div>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

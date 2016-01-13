@@ -1,0 +1,11 @@
+Date        Start    Stop     Activity          Comments 
+21/10/15    21:00    21:30    Coding            Intial Commit
+22/10/15    16:00    21:40    Coding            Implemented and created python script to populate database
+22/10/15    22:30    23:10    Coding            Added login.html working on bitter.cgi structure
+23/10/15    10:00    19:00    Coding/debugging  Implemented login and logout and a whole lot of other stuff
+23/10/15    20:00    23:00    Coding            Implemented search by user or bleat and viewing of profiles
+24/10/15    09:28    14:00    Coding            Implemented Sending bleats, home button
+24/10/15    15:00    16:40    Coding            Implemented displaying relevant bleats and listening and unlistening
+25/10/15    06:00    12:50    Coding            Implemented replying to bleats, user account creation
+25/10/15    14:00    19:00    Coding            Added boostrap to everything, implemented password recovery, suspending/deleting account
+26/10/15    08:00    09:22    Coding            Implemented editing information, profile text

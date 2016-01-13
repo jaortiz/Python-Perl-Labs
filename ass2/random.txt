@@ -1,0 +1,23 @@
+   <br>
+   <h2>Bleats</h2>
+   <br>
+   %(bleats)s
+   
+   <textarea name="bleatStr" form="bleatForm" placeholder="bleat!!" rows=4 cols=50 maxlength=142
+         required></textarea>
+
+htmlFile = open("html/emailVerify.html")
+   emailContent = htmlFile.read()
+   htmlFile.close()
+   emailContent = emailContent % {"fullName":fullName, "url":url, "username":username}
+   
+   msg = MIMEMultipart()
+   msg["From"] = bitterEmail
+   msg["To"] = email
+   msg["Subject"] = "Bitter Verification"
+   
+   msg.attach(MIMEText(emailContent,"html"))
+   
+   mailServer.sendmail(bitterEmail, email, msg,as_string())
+   mailServer.quit()
+   

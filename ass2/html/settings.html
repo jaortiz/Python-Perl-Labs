@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bitter</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+   <nav class="navbar navbar-default">
+      <div class="container-fluid"> 
+         <div class="navbar-header">
+         <a class="navbar-brand">Bitter</a>
+      </div>
+         <ul class="nav navbar-nav">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Home" name="operation">Home</button>
+               </form>
+            </li>
+         </ul>
+         <div class="col-sm-3 col-md-3">
+         <form action="bitter.cgi" class="navbar-form" role="search">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="searchQuery"required>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" value="search" name="operation"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+         </div>
+         </form>
+         </div>
+         <ul class="nav navbar-nav navbar-right">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Settings" name="operation">Settings</button>
+               </form>
+            </li>
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Log Out" name="operation">Log Out</button>
+               </form>
+            </li>
+         </ul>
+   </nav>
+</header>
+<body>
+<style>
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+
+input[type="text"] {
+   color:#000000;
+}
+
+input[type="password"] {
+   color:#000000;
+}
+
+</style>
+   <div class="container-fluid bg-1 text-center">
+      <h1>Bitter</h1>
+   </div>
+   <div class="container-fluid bg-2 text-center">
+      <h2>Edit Settings</h2>
+      <div class="row">
+         <div class="col-lg-6">
+            <div class="form-group">
+               <form action="bitter.cgi" method="post" id="updateForm">
+                  <h3>Update User Account </h2>
+                  <input type="password" name="password" placeholder="Password">
+                  <br>
+                  <br>
+                  <input type="text" name="email" placeholder="Email">
+                  <br>
+                  <br>
+                  <input type="text" name="fullName" placeholder="Full Name">
+                  <br>
+                  <br>
+                  <input type="text" name="homeLatitude" placeholder="Home Latitude">
+                  <br>
+                  <br>
+                  <input type="text" name="homeLongitude" placeholder="Home Longitude">
+                  <br>
+                  <br>
+                  <input type="text" name="homeSuburb" placeholder="Home Suburb">
+                  <br>
+                  <br>
+                  <textarea name="profileText" class="form-control" form="updateForm" placeholder="Profile Description" rows=5 cols=50 maxlength=300 required></textarea>
+                  <br>
+                  Upload Profile Pic: 
+                  <br>
+                  <input type="file" name="pic" accept="image/*">
+                  <br>
+                  <input type="submit" value="Update Account" name="operation" class="btn btn-info">
+               </form>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <h3>Account Settings</h3>
+            <form action="bitter.cgi" method="get">
+               <input type="submit" name="operation" value="Unsuspend Account" class="btn btn-info">
+            </form>
+            <br>
+            <form action="bitter.cgi" method="get">
+               <input type="submit" name="operation" value="Suspend Account" class="btn btn-info">
+            </form>
+            <br>
+            <form action="bitter.cgi" method="get">
+               <input type="submit" name="operation" value="Delete Account" class="btn btn-info">
+            </form>
+         </div>
+      </div>
+   </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

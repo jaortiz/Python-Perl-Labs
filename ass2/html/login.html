@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bitter</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+   
+}
+input[type="text"] {
+   color:#000000;
+}
+
+input[type="password"] {
+   color:#000000;
+}
+
+input[type="email"] {
+   color:#000000;
+}
+</style>
+   <div class="container-fluid bg-1 text-center">
+      <h1>Bitter</h1>
+   </div>
+   <div class="container-fluid bg-2 text-center">
+      <div class="row">
+         <div class="col-lg-6">
+            <div class="form-group">
+               <form action="bitter.cgi" method="post">
+                  <h3>Login</h3>
+                  <br>
+                  Username:
+                  <input type="text" name="username" required>
+                  <br>
+                  <br>
+                  Password:
+                  <input type="password" name="password" required>
+                  <br><br>
+                  <input type="submit" value="Log In" name="operation" class="btn btn-info">
+               </form>
+               <br>
+               <br>
+               <form action="bitter.cgi" method="post">
+               <input type="submit" value="Forgot Password" name="operation" class="btn btn-info">
+            </form>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <h3>New to Bitter? Sign Up?</h3>
+            <form action="bitter.cgi" method="post">
+               <input type="text" name="username" placeholder="Username" required>
+               <br>
+               <br>
+               <input type="text" name="fullName" placeholder="Full Name" required>
+               <br>
+               <br>
+               <input type="email" name="email" placeholder="Email" required>
+               <br>
+               <br>
+               <input type="password" name="password" placeholder="Password" required>
+               <br>
+               <br>
+               <input type="submit" value="Sign Up" name="operation" class="btn btn-info">
+            </form>
+         </div>
+      </div>
+   </div>
+   
+   
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

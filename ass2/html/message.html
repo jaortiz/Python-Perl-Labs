@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bitter</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+   
+}
+input[type="text"] {
+   color:#000000;
+}
+
+input[type="password"] {
+   color:#000000;
+}
+</style>
+   <div class="container-fluid bg-1 text-center">
+      <h1>Bitter</h1>
+   </div>
+   <div class="container-fluid bg-2 text-center">
+      <h3>%(message)s</h3>
+      <br>
+      <form action="bitter.cgi" method="get">
+         <button class="btn btn-info" value="login" name="operation">Back</button>
+      </form>
+   </div>
+   
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

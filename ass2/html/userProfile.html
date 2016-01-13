@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bitter</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<header>
+   <nav class="navbar navbar-default">
+      <div class="container-fluid"> 
+         <div class="navbar-header">
+         <a class="navbar-brand">Bitter</a>
+      </div>
+         <ul class="nav navbar-nav">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Home" name="operation">Home</button>
+               </form>
+            </li>
+         </ul>
+         <div class="col-sm-3 col-md-3">
+         <form action="bitter.cgi" class="navbar-form" role="search">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="searchQuery"required>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" value="search" name="operation"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+         </div>
+         </form>
+         </div>
+         <ul class="nav navbar-nav navbar-right">
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Settings" name="operation">Settings</button>
+               </form>
+            </li>
+            <li>
+               <form action="bitter.cgi" method="get">
+                  <button class="btn btn-link navbar-btn" value="Log Out" name="operation">Log Out</button>
+               </form>
+            </li>
+         </ul>
+   </nav>
+</header>
+<body>
+<style>
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.bg-2 {
+   background-color: #474e5d; /* Dark Blue */
+   color: #ffffff;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+.col-lg-4 {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+input[type="text"] {
+   color:#000000;
+}
+</style>
+   <div class="container-fluid bg-1 text-center">
+      <div class="row">
+         <div class="col-lg-4">
+            <img src="%(profilepic)s" width="200" height="200" class="img-circle">
+         </div>
+         <div class="col-lg-4">
+            <h3>%(fullName)s</h3>
+            <br>
+            <h3>@%(username)s</h3>
+            <br>
+            <h4>%(profileText)s</h4>
+            %(listener)s
+         </div>
+         <div class="col-lg-4">
+            <h4>%(homeLatitude)s</h4>
+            <br>
+            <h4>%(homeLongitude)s</h4>
+            <br>
+            <h4>%(homeSuburb)s</h4>
+         </div>
+      </div>
+      %(bleats)s
+   </div>
+
+   
+   
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

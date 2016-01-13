@@ -1,0 +1,20 @@
+   <div class="container-fluid bg-2 text-center">
+      <div class="row">
+         <div class="col-lg-6">
+            <img src="%(profilepic)s" width="150" height="150" class="img-circle">
+         </div>
+         <div class="col-lg-6">
+            Username: %(username)s
+            <br>
+            Full Name: %(fullName)s
+            <br>
+            <form action="bitter.cgi" method="get">
+               <input type="hidden" name="username" value="%(username)s">
+               <input type="hidden" name="fullName" value="%(fullName)s">
+               <button class="btn btn-info" value="View Profile" name="operation">View Profile</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <br>
+   <br>

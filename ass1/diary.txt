@@ -1,0 +1,14 @@
+Date        Start    Stop     Activity          Comments 
+20/09/15    14:00    17:00    Coding            Implemented echo
+21/09/15    09:00    1:41     Coding            Finished subset 0 Examples
+21/09/15    18:01    22:22    Coding/debugging  Finished subset 1 Examples
+22/09/15    10:56    12:00    Coding/debugging  Finished args.sh, added imports helper function
+23/09/15    10:21    12:00    Coding/debugging  Finished Subset 2 Examples
+23/09/15    16:00    17:00    Cleaning Code     Cleaned up code added more helper functions
+23/09/15    20:30    23:00    Coding/debugging  Finished Subset 3 Examples
+25/09/15    13:10    17:17    Coding/Debugging  Finished Subet 4 Examples
+25/09/15    18:05    19:03    Cleaning Code     Cleaning code, added regexFunctions.pl
+26/09/15    15:48    20:05    Coding/debugging  Debugging code, accounting for more test cases in code
+27/09/15    12:00    18:22    Coding/debugging  Writing demo and test scripts, cleaning code and commenting
+
+
